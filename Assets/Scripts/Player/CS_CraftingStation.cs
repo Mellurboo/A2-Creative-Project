@@ -1,4 +1,3 @@
-using UI;
 using UnityEngine;
 
 public class CS_CraftingStation : MonoBehaviour {
@@ -26,5 +25,14 @@ public class CS_CraftingStation : MonoBehaviour {
         }
         
         return nextFreeSlot;
+    }
+    
+    /// <summary>
+    /// Ugly code for checking crafting recipies but that clock won't stop ticking
+    /// </summary>
+    public void checkCraftingRecipies() {
+        if (itemSlots[1] ) {
+            
+        }
     }
 }
