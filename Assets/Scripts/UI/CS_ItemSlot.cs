@@ -40,6 +40,12 @@ public class CS_ItemSlot : MonoBehaviour {
     /// </summary>
     public void ClearItemSlot() {
         currentItem = null;
+        
+        // tell the crafting table to check for new crafting recipies.
+        if (slotType == E_itemSlotType.CraftingStation) {
+            GetComponentInParent<CS_CraftingStation>().checkCraftingRecipies();
+        }
+        
         RedrawItemSlot();
     }
 
@@ -65,7 +71,7 @@ public class CS_ItemSlot : MonoBehaviour {
     /// Redraws the Item Slot info when called so it represents what is in the item slot
     /// accuratly at all times
     /// </summary>
-    private void RedrawItemSlot() {
+    public void RedrawItemSlot() {
         if (currentItem) {
             ItemSlotIcon.GameObject().SetActive(true);
             ItemSlotIcon.texture = currentItem.itemIcon;

@@ -130,6 +130,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1416389216}
     m_Modifications:
     - target: {fileID: 4687726783614964836, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
+      propertyPath: slotType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687726783614964836, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: currentItem
       value: 
       objectReference: {fileID: 0}
@@ -224,7 +228,11 @@ PrefabInstance:
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: Inventory
       value: 
-      objectReference: {fileID: 1041437275}
+      objectReference: {fileID: 1832001899}
+    - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
+      propertyPath: CraftingStation
+      value: 
+      objectReference: {fileID: 1416389218}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: ItemSlotBehavour
       value: 2
@@ -246,7 +254,7 @@ PrefabInstance:
     - target: {fileID: 4687726783614964836, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: currentItem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: a0bb797dc9b985b4cabd0ecf767f2de2, type: 2}
     - target: {fileID: 4687726783614964842, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: m_Name
       value: ItemSlot
@@ -338,11 +346,11 @@ PrefabInstance:
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: Inventory
       value: 
-      objectReference: {fileID: 1041437275}
+      objectReference: {fileID: 1832001899}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: CraftingStation
       value: 
-      objectReference: {fileID: 1041437276}
+      objectReference: {fileID: 1416389218}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: ItemSlotBehavour
       value: 3
@@ -375,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 4687726783614964836, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: currentItem
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: f957a49552e63ad4888089f912b32c58, type: 2}
     - target: {fileID: 4687726783614964842, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: m_Name
       value: ItemSlot
@@ -467,11 +475,11 @@ PrefabInstance:
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: Inventory
       value: 
-      objectReference: {fileID: 1041437275}
+      objectReference: {fileID: 1832001899}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: CraftingStation
       value: 
-      objectReference: {fileID: 1041437276}
+      objectReference: {fileID: 1416389218}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: ItemSlotBehavour
       value: 3
@@ -596,11 +604,11 @@ PrefabInstance:
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: Inventory
       value: 
-      objectReference: {fileID: 1041437275}
+      objectReference: {fileID: 1832001899}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: CraftingStation
       value: 
-      objectReference: {fileID: 1041437276}
+      objectReference: {fileID: 1416389218}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: ItemSlotBehavour
       value: 3
@@ -709,8 +717,6 @@ GameObject:
   - component: {fileID: 1041437274}
   - component: {fileID: 1041437273}
   - component: {fileID: 1041437272}
-  - component: {fileID: 1041437275}
-  - component: {fileID: 1041437276}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -768,41 +774,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1041437275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041437271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a80f121d3dc6414280f4981986127b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemSlots:
-  - {fileID: 2080065506}
-  - {fileID: 305031574}
-  - {fileID: 383594127}
-  - {fileID: 524394259}
-  - {fileID: 1758590618}
---- !u!114 &1041437276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041437271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df1159d136fed934e97dbbea46239eb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemSlots:
-  - {fileID: 1919463336}
-  - {fileID: 1340177535}
-  - {fileID: 1318896682}
-  resultsSlot: {fileID: 1895764472}
 --- !u!1 &1089259989
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,6 +895,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1416389216}
     m_Modifications:
     - target: {fileID: 4687726783614964836, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
+      propertyPath: slotType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687726783614964836, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: currentItem
       value: 
       objectReference: {fileID: 0}
@@ -1018,7 +993,11 @@ PrefabInstance:
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: Inventory
       value: 
-      objectReference: {fileID: 1041437275}
+      objectReference: {fileID: 1832001899}
+    - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
+      propertyPath: CraftingStation
+      value: 
+      objectReference: {fileID: 1416389218}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: ItemSlotBehavour
       value: 2
@@ -1050,6 +1029,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1416389216}
+  - component: {fileID: 1416389217}
+  - component: {fileID: 1416389218}
   m_Layer: 5
   m_Name: Crafting
   m_TagString: Untagged
@@ -1081,6 +1062,42 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1416389217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416389215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e822d02d4d55492aa9449e6e53ae594f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AcidicStarfury: {fileID: 11400000, guid: fabad2f8cc60a72428e6d0b0f4bb6574, type: 2}
+  Electrolydium: {fileID: 11400000, guid: f957a49552e63ad4888089f912b32c58, type: 2}
+  Francium: {fileID: 11400000, guid: a0bb797dc9b985b4cabd0ecf767f2de2, type: 2}
+  FreshAir: {fileID: 11400000, guid: b1159de3be5c44b41bdf28590d8cac54, type: 2}
+  HumanCapsuleModule: {fileID: 11400000, guid: 87f8b98c9f4376a418663fc425c8b0fd, type: 2}
+  PortalPaste: {fileID: 11400000, guid: a189d33d11b27dd4a96e068cf0bee705, type: 2}
+  WormholeInABottle: {fileID: 11400000, guid: 7c7fff614494f084eae31bb051a55316, type: 2}
+--- !u!114 &1416389218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416389215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1159d136fed934e97dbbea46239eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSlots:
+  - {fileID: 1919463336}
+  - {fileID: 1340177535}
+  - {fileID: 1318896682}
+  resultsSlot: {fileID: 1895764472}
 --- !u!1001 &1758590617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1183,11 +1200,11 @@ PrefabInstance:
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: Inventory
       value: 
-      objectReference: {fileID: 1041437275}
+      objectReference: {fileID: 1832001899}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: CraftingStation
       value: 
-      objectReference: {fileID: 1041437276}
+      objectReference: {fileID: 1416389218}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: ItemSlotBehavour
       value: 3
@@ -1219,6 +1236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1832001898}
+  - component: {fileID: 1832001899}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -1251,6 +1269,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1832001899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832001897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a80f121d3dc6414280f4981986127b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSlots:
+  - {fileID: 2080065506}
+  - {fileID: 305031574}
+  - {fileID: 383594127}
+  - {fileID: 524394259}
+  - {fileID: 1758590618}
 --- !u!1001 &1895764470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1258,6 +1294,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1416389216}
     m_Modifications:
+    - target: {fileID: 4687726783614964836, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
+      propertyPath: slotType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4687726783614964836, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: currentItem
       value: 
@@ -1353,7 +1393,11 @@ PrefabInstance:
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: Inventory
       value: 
-      objectReference: {fileID: 1041437275}
+      objectReference: {fileID: 1832001899}
+    - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
+      propertyPath: CraftingStation
+      value: 
+      objectReference: {fileID: 1416389218}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: ItemSlotBehavour
       value: 0
@@ -1410,8 +1454,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemSlotBehavour: 2
-  Inventory: {fileID: 1041437275}
-  CraftingStation: {fileID: 0}
+  Inventory: {fileID: 1832001899}
+  CraftingStation: {fileID: 1416389218}
 --- !u!1 &1985840612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,11 +1642,11 @@ PrefabInstance:
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: Inventory
       value: 
-      objectReference: {fileID: 1041437275}
+      objectReference: {fileID: 1832001899}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: CraftingStation
       value: 
-      objectReference: {fileID: 1041437276}
+      objectReference: {fileID: 1416389218}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: ItemSlotBehavour
       value: 3
@@ -1643,6 +1687,10 @@ PrefabInstance:
     - target: {fileID: 4687726782762051973, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CS_ItemSlotClicked, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687726783614964836, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
+      propertyPath: slotType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4687726783614964836, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: currentItem
