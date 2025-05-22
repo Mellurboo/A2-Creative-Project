@@ -9,18 +9,24 @@ public enum E_ItemSlotBehavour {
 }
 public class CS_ItemSlotClicked : MonoBehaviour {
     [SerializeField] E_ItemSlotBehavour ItemSlotBehavour;
-    [Space] 
+    [Space]
+    [Header("Inventory Structure References")]
     public CS_Inventory Inventory;
     public CS_CraftingStation CraftingStation;
     public CS_Objectives Objectives;
     public CS_Bonds Bonds;
-    
+    [Space]
     CS_ItemSlot thisItemSlot;
 
     private void Start() {
         thisItemSlot = GetComponent<CS_ItemSlot>();
     }
 
+    /// <summary>
+    /// runs a check and will execute code based on what type of button it is and handles
+    /// moving objects to different locations and item slots, it also handles clearing the inventory
+    /// or crafting table when needed. this script will also deduct from bonds when needed
+    /// </summary>
     public void OnItemSlotClicked() {
         switch (ItemSlotBehavour) {
             case E_ItemSlotBehavour.Nothing:

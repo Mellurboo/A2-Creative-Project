@@ -9,7 +9,7 @@ public class CS_CraftingStation : MonoBehaviour {
     public TMP_Text bondsText;
     
     /// <summary>
-    /// returns the whole item slot arry
+    /// returns the whole item slot array
     /// </summary>
     /// <returns>cs_itemslot</returns>
     public CS_ItemSlot[] getItemSlots(){
@@ -17,7 +17,8 @@ public class CS_CraftingStation : MonoBehaviour {
     }
     
     /// <summary>
-    ///  returns the next free item slot in the inventory
+    /// returns the next free item slot in the inventory as a reference
+    /// to be interfaced with
     /// </summary>
     /// <returns>cs_itemslot</returns>
     public CS_ItemSlot getNextFreeSlot() {
@@ -32,7 +33,10 @@ public class CS_CraftingStation : MonoBehaviour {
     }
     
     /// <summary>
-    /// Ugly code for checking crafting recipies but that clock won't stop ticking
+    /// Ugly code for checking crafting recipies but that clock won't stop ticking,
+    /// it checks for all the possible crafting recipies, and then will check if the player has enough
+    /// bonds, if not it will display the appropriate text if it does it will apply the item to the
+    /// item slot and redraw.
     /// </summary>
     public void checkCraftingRecipies() {
         bondsText.text = "";
@@ -87,7 +91,11 @@ public class CS_CraftingStation : MonoBehaviour {
         
         resultsSlot.ClearItemSlot();
     }
-
+    
+    /// <summary>
+    /// clears all items from the crafting table including
+    /// the output slot.
+    /// </summary>
     public void ClearCraftingStation() {
         foreach (CS_ItemSlot slot in itemSlots) {
             slot.ClearItemSlot();

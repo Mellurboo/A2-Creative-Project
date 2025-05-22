@@ -377,6 +377,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
+      propertyPath: Bonds
+      value: 
+      objectReference: {fileID: 1041437278}
+    - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: Inventory
       value: 
       objectReference: {fileID: 1041437277}
@@ -2452,7 +2456,7 @@ MonoBehaviour:
   Inventory: {fileID: 1041437277}
   CraftingStation: {fileID: 1306598395}
   Objectives: {fileID: 1041437275}
-  Bonds: {fileID: 0}
+  Bonds: {fileID: 1041437278}
 --- !u!1 &1242715484
 GameObject:
   m_ObjectHideFlags: 0
@@ -3412,6 +3416,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
+      propertyPath: Bonds
+      value: 
+      objectReference: {fileID: 1041437278}
+    - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: Inventory
       value: 
       objectReference: {fileID: 1041437277}
@@ -3899,6 +3907,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
+      propertyPath: Bonds
+      value: 
+      objectReference: {fileID: 1041437278}
     - target: {fileID: 8888858102726365874, guid: bbb59851154b4db4892ce905ab06b0dd, type: 3}
       propertyPath: Inventory
       value: 

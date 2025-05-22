@@ -20,6 +20,9 @@ public class CS_ItemSlot : MonoBehaviour {
 
     /// <summary>
     /// Changes what Item is Present in the Item Slot
+    /// and then redraws the UI, it will also dispatch a
+    /// notification to the crafting table to tell it to update the
+    /// crafting display if needs be.
     /// </summary>
     /// <param name="newItem">new target item</param>
     /// <returns>item slot</returns>
@@ -36,7 +39,8 @@ public class CS_ItemSlot : MonoBehaviour {
     }
 
     /// <summary>
-    /// sets the item slot contents to null
+    /// sets the item slot contents to null and will
+    /// notify the crafting table to update too
     /// </summary>
     public void ClearItemSlot() {
         currentItem = null;
@@ -55,7 +59,6 @@ public class CS_ItemSlot : MonoBehaviour {
     /// <returns>SO_Item</returns>
     public SO_Item GetCurrentItem() {
         return currentItem;
-        RedrawItemSlot();
     }
 
     /// <summary>
@@ -64,12 +67,11 @@ public class CS_ItemSlot : MonoBehaviour {
     /// <returns>string item name</returns>
     public string GetItemName() {
         return currentItem.itemName;
-        RedrawItemSlot();
     }
 
     /// <summary>
     /// Redraws the Item Slot info when called so it represents what is in the item slot
-    /// accuratly at all times
+    /// Accuratly at all times
     /// </summary>
     public void RedrawItemSlot() {
         if (currentItem) {

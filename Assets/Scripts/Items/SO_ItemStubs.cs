@@ -2,6 +2,13 @@
 using UnityEngine;
 
 public class SO_ItemStubs : MonoBehaviour {
+    
+    /*
+     * Using a reflection technique to assign the static variables from the serialised
+     * Private Variables, this allows me to assign them in the inspector which saves
+     * me a lot of time in the long run and makes my game look cleaner
+    */ 
+    
     public static SO_Item iAcidicStarfury;
     public static SO_Item iElectrolydium;
     public static SO_Item iFrancium;
@@ -19,7 +26,7 @@ public class SO_ItemStubs : MonoBehaviour {
     [SerializeField] private SO_Item WormholeInABottle;
     
     /// <summary>
-    /// Reflecting onto the static classes
+    /// Reflecting onto the static classes before the game starts
     /// </summary>
     private void Awake() {
         iAcidicStarfury = AcidicStarfury;
