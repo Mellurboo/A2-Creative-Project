@@ -15,3 +15,4 @@ MonoBehaviour:
   itemName: Portal Paste
   itemDescription: Free form
   itemIcon: {fileID: 2800000, guid: 62ae82a0223c0db43aba53d2d85b5690, type: 3}
+  bondValue: 3

@@ -13,6 +13,7 @@ public class CS_ItemSlotClicked : MonoBehaviour {
     public CS_Inventory Inventory;
     public CS_CraftingStation CraftingStation;
     public CS_Objectives Objectives;
+    public CS_Bonds Bonds;
     
     CS_ItemSlot thisItemSlot;
 
@@ -45,6 +46,19 @@ public class CS_ItemSlotClicked : MonoBehaviour {
                     
                     if (Objectives.queryObjectives(thisItemSlot.currentItem)) {
                         CraftingStation.ClearCraftingStation();
+
+                        if (thisItemSlot.GetCurrentItem() == SO_ItemStubs.iPortalPaste) {
+                            Bonds.removeBonds(SO_ItemStubs.iPortalPaste.bondValue);
+                        }
+                        
+                        if (thisItemSlot.GetCurrentItem() == SO_ItemStubs.iWormholeInABottle) {
+                            Bonds.removeBonds(SO_ItemStubs.iWormholeInABottle.bondValue);
+                        }
+                        
+                        if (thisItemSlot.GetCurrentItem() == SO_ItemStubs.iHumanCapsuleModule) {
+                            Bonds.removeBonds(SO_ItemStubs.iHumanCapsuleModule.bondValue);
+                        }
+                        
                     }
                 }
                 break;

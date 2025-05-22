@@ -5,4 +5,5 @@ public class SO_Item : ScriptableObject {
     public string itemName;
     public string itemDescription;
     public Texture2D itemIcon;
+    public int bondValue;
 }

@@ -1,8 +1,12 @@
+using TMPro;
 using UnityEngine;
 
 public class CS_CraftingStation : MonoBehaviour {
     public CS_ItemSlot[] itemSlots;
     public CS_ItemSlot resultsSlot;
+    [Space] 
+    public CS_Bonds bonds;
+    public TMP_Text bondsText;
     
     /// <summary>
     /// returns the whole item slot arry
@@ -34,9 +38,16 @@ public class CS_CraftingStation : MonoBehaviour {
         if (itemSlots[0].GetCurrentItem() == SO_ItemStubs.iAcidicStarfury &&
             itemSlots[1].GetCurrentItem() == SO_ItemStubs.iFreshAir &&
             itemSlots[2].GetCurrentItem() == SO_ItemStubs.iFrancium) {
+
+            if (SO_ItemStubs.iPortalPaste.bondValue > bonds.currentBonds) {
+                bondsText.text =
+                    $"This Craft requires {SO_ItemStubs.iPortalPaste.bondValue} bonds, you have {bonds.currentBonds}";
+            }
+            else {
+                resultsSlot.SetItemInSlot(SO_ItemStubs.iPortalPaste);
+                resultsSlot.RedrawItemSlot();
+            }
             
-            resultsSlot.SetItemInSlot(SO_ItemStubs.iPortalPaste);
-            resultsSlot.RedrawItemSlot();
             return;
         }
         
@@ -44,8 +55,15 @@ public class CS_CraftingStation : MonoBehaviour {
             itemSlots[1].GetCurrentItem() == SO_ItemStubs.iElectrolydium &&
             itemSlots[2].GetCurrentItem() == SO_ItemStubs.iPortalPaste) {
             
-            resultsSlot.SetItemInSlot(SO_ItemStubs.iWormholeInABottle);
-            resultsSlot.RedrawItemSlot();
+            if (SO_ItemStubs.iWormholeInABottle.bondValue > bonds.currentBonds) {
+                bondsText.text =
+                    $"This Craft requires {SO_ItemStubs.iWormholeInABottle.bondValue} bonds, you have {bonds.currentBonds}";
+            }
+            else {
+                resultsSlot.SetItemInSlot(SO_ItemStubs.iWormholeInABottle);
+                resultsSlot.RedrawItemSlot();
+            }
+            
             return;
         }
         
@@ -53,17 +71,26 @@ public class CS_CraftingStation : MonoBehaviour {
             itemSlots[1].GetCurrentItem() == SO_ItemStubs.iElectrolydium &&
             itemSlots[2].GetCurrentItem() == SO_ItemStubs.iWormholeInABottle) {
             
-            resultsSlot.SetItemInSlot(SO_ItemStubs.iHumanCapsuleModule);
-            resultsSlot.RedrawItemSlot();
+            if (SO_ItemStubs.iHumanCapsuleModule.bondValue > bonds.currentBonds) {
+                bondsText.text =
+                    $"This Craft requires {SO_ItemStubs.iHumanCapsuleModule.bondValue} bonds, you have {bonds.currentBonds}";
+            }
+            else {
+                resultsSlot.SetItemInSlot(SO_ItemStubs.iHumanCapsuleModule);
+                resultsSlot.RedrawItemSlot();
+            }
+            
             return;
         }
         
         resultsSlot.ClearItemSlot();
+        bondsText.text = "";
     }
 
     public void ClearCraftingStation() {
         foreach (CS_ItemSlot slot in itemSlots) {
             slot.ClearItemSlot();
+            bondsText.text = "";
         }
     }
 }
