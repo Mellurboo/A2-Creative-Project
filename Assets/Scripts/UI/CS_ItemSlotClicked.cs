@@ -45,7 +45,6 @@ public class CS_ItemSlotClicked : MonoBehaviour {
                     Inventory.getNextFreeSlot().SetItemInSlot(thisItemSlot.currentItem);
                     
                     if (Objectives.queryObjectives(thisItemSlot.currentItem)) {
-                        CraftingStation.ClearCraftingStation();
 
                         if (thisItemSlot.GetCurrentItem() == SO_ItemStubs.iPortalPaste) {
                             Bonds.removeBonds(SO_ItemStubs.iPortalPaste.bondValue);
@@ -58,7 +57,7 @@ public class CS_ItemSlotClicked : MonoBehaviour {
                         if (thisItemSlot.GetCurrentItem() == SO_ItemStubs.iHumanCapsuleModule) {
                             Bonds.removeBonds(SO_ItemStubs.iHumanCapsuleModule.bondValue);
                         }
-                        
+                        CraftingStation.ClearCraftingStation();
                     }
                 }
                 break;
