@@ -1,16 +1,18 @@
 using UnityEngine;
 
 public enum E_ItemSlotBehavour {
-    nothing,
-    clearItemSlot,
+    Nothing,
+    ClearItemSlot,
     MoveIntoInventory,
-    MoveIntoCrafting
+    MoveIntoCrafting,
+    Objective
 }
 public class CS_ItemSlotClicked : MonoBehaviour {
     [SerializeField] E_ItemSlotBehavour ItemSlotBehavour;
     [Space] 
     public CS_Inventory Inventory;
     public CS_CraftingStation CraftingStation;
+    public CS_Objectives Objectives;
     
     CS_ItemSlot thisItemSlot;
 
@@ -20,9 +22,9 @@ public class CS_ItemSlotClicked : MonoBehaviour {
 
     public void OnItemSlotClicked() {
         switch (ItemSlotBehavour) {
-            case E_ItemSlotBehavour.nothing:
+            case E_ItemSlotBehavour.Nothing:
                 break;
-            case E_ItemSlotBehavour.clearItemSlot:
+            case E_ItemSlotBehavour.ClearItemSlot:
                 thisItemSlot.ClearItemSlot();
                 break;
             case E_ItemSlotBehavour.MoveIntoInventory:
@@ -36,6 +38,9 @@ public class CS_ItemSlotClicked : MonoBehaviour {
                     CraftingStation.getNextFreeSlot().SetItemInSlot(thisItemSlot.currentItem);
                 }
                 thisItemSlot.ClearItemSlot();
+                break;
+            case E_ItemSlotBehavour.Objective:
+                Objectives.queryObjectives(thisItemSlot.currentItem);
                 break;
                 
         }

@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CS_Objectives : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class CS_Objectives : MonoBehaviour {
+    public CS_Objective[] objectives;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void queryObjectives(SO_Item queryItem) {
+        foreach (CS_Objective obj in objectives) {
+            if (obj.targetItem == queryItem && !obj.isComplete) {
+                obj.CompleteObjective();
+            }
+        }
     }
 }
