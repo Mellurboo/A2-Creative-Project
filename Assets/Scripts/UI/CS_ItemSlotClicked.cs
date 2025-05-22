@@ -40,7 +40,13 @@ public class CS_ItemSlotClicked : MonoBehaviour {
                 thisItemSlot.ClearItemSlot();
                 break;
             case E_ItemSlotBehavour.Objective:
-                Objectives.queryObjectives(thisItemSlot.currentItem);
+                if (thisItemSlot.currentItem) {
+                    Inventory.getNextFreeSlot().SetItemInSlot(thisItemSlot.currentItem);
+                    
+                    if (Objectives.queryObjectives(thisItemSlot.currentItem)) {
+                        CraftingStation.ClearCraftingStation();
+                    }
+                }
                 break;
                 
         }

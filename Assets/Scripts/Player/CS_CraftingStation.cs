@@ -60,4 +60,10 @@ public class CS_CraftingStation : MonoBehaviour {
         
         resultsSlot.ClearItemSlot();
     }
+
+    public void ClearCraftingStation() {
+        foreach (CS_ItemSlot slot in itemSlots) {
+            slot.ClearItemSlot();
+        }
+    }
 }
