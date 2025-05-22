@@ -35,6 +35,8 @@ public class CS_CraftingStation : MonoBehaviour {
     /// Ugly code for checking crafting recipies but that clock won't stop ticking
     /// </summary>
     public void checkCraftingRecipies() {
+        bondsText.text = "";
+        
         if (itemSlots[0].GetCurrentItem() == SO_ItemStubs.iAcidicStarfury &&
             itemSlots[1].GetCurrentItem() == SO_ItemStubs.iFreshAir &&
             itemSlots[2].GetCurrentItem() == SO_ItemStubs.iFrancium) {
@@ -84,7 +86,6 @@ public class CS_CraftingStation : MonoBehaviour {
         }
         
         resultsSlot.ClearItemSlot();
-        bondsText.text = "";
     }
 
     public void ClearCraftingStation() {

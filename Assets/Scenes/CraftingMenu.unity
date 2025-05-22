@@ -684,6 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OldDisable: {fileID: 1170673512}
   NewEnable: {fileID: 682174674}
+  craftingStation: {fileID: 1306598395}
 --- !u!1 &304064658
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OldDisable: {fileID: 682174674}
   NewEnable: {fileID: 1170673512}
+  craftingStation: {fileID: 1306598395}
 --- !u!114 &304064661
 MonoBehaviour:
   m_ObjectHideFlags: 0
