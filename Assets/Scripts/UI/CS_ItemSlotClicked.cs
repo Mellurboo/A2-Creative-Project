@@ -57,8 +57,9 @@ public class CS_ItemSlotClicked : MonoBehaviour {
                         if (thisItemSlot.GetCurrentItem() == SO_ItemStubs.iHumanCapsuleModule) {
                             Bonds.removeBonds(SO_ItemStubs.iHumanCapsuleModule.bondValue);
                         }
-                        CraftingStation.ClearCraftingStation();
                     }
+
+                    CraftingStation.ClearCraftingStation();
                 }
                 break;
                 
